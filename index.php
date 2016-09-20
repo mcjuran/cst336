@@ -30,17 +30,25 @@ function displayRandomCard() {
     array_push($student_pic, "chris");
     array_push($student_pic, "hardesh");
     array_push($student_pic, "brian");
-  
-  
-  /*$card = array_pop($deck);
-  
-  echo $card . "<br />";
-  
- 
-  $randomSuitIndex = rand(0,3);
-  $randomSuit = $suits[$randomSuitIndex];      
-  echo "<img src='img/cards/$randomSuit/" . rand(1,13). ".png' />";*/
-
+    
+    
+    function playGame(){
+        global $student_cardHand;
+        global $deck;
+        global $suits; // these call the 3 global variables into the function
+        
+        //getHand called from below
+        array_push($student_cardHand, getHand());
+        array_push($student_cardHand, getHand());
+        array_push($student_cardHand, getHand());
+        array_push($student_cardHand, getHand());
+        
+        displayHand(); //called from below
+        displayWinner(); //called from below
+    }
+  function getHand(){ //this is where we need to ensure we don't get duplicates
+      
+  }
     
 }
 
