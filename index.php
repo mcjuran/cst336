@@ -224,5 +224,26 @@ function showCards($player){
 <html>
     <head>
         <title>SilverJack</title>
+        <link href = "css/style.css" rel = "stylesheet" />
+        
+        <h1>SilverJack</h1>
     </head>
+    
+    <body>
+        <?=shuffle($pictures)?>
+        <img class = "pictureslist" src="img/<?=$playerPictures[0]?>" alt="p1" height="120" width="120" /><span class="playerList"> <?=showCards("p1")?> <br><br>
+        <img class = "pictureslist" src="img/<?=$playerPictures[1]?>" alt="p2" height="120" width="120" /><span class="playerList"> <?=showCards("p2")?> <br><br>
+        <img class = "pictureslist" src="img/<?=$playerPictures[2]?>" alt="p3" height="120" width="120" /><span class="playerList"> <?=showCards("p3")?> <br><br>
+        <img class = "pictureslist" src="img/<?=$playerPictures[3]?>" alt="p4" height="120" width="120" /><span class="playerList"> <?=showCards("p4")?> <br><br>
+    </body>
+    
+    <br>
+    
+    <table align = "center" color = "white">
+        <tr>
+            <td>
+                <a href="javascript:history.go(0)" id="button">Play Again!</a>
+            </td>
+        </tr>
+    </table>
 </html>
