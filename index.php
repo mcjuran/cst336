@@ -33,10 +33,8 @@ function dealHand($player){
             $card = array_pop($deck); //deals the top card from the deck
             $suit = $suits[floor($card/13)]; //determines the suit
             $face = $card % 13; //determines value, with a mod 13 for 13 cards in a suit
-            if ($face == 0){
+            if ($face == 0)
                 $face = 13; //if the card has no value (Ace), the value is 13
-            }
-            
             $p1[] = $card;
             echo "<img src=cards/" . $suit . "/" . $face . ".png";
             
@@ -50,9 +48,8 @@ function dealHand($player){
             $card = array_pop($deck); //deals the top card from the deck
             $suit = $suits[floor($card/13)]; //determines the suit
             $face = $card % 13; //determines value, with a mod 13 for 13 cards in a suit
-            if ($face == 0){
+            if ($face == 0)
                 $face = 13; //if the card has no value (Ace), the value is 13
-            }
             
             $p2[] = $card;
             echo "<img src=cards/" . $suit . "/" . $face . ".png";
@@ -67,10 +64,8 @@ function dealHand($player){
             $card = array_pop($deck); //deals the top card from the deck
             $suit = $suits[floor($card/13)]; //determines the suit
             $face = $card % 13; //determines value, with a mod 13 for 13 cards in a suit
-            if ($face == 0){
+            if ($face == 0)
                 $face = 13; //if the card has no value (Ace), the value is 13
-            }
-            
             $p3[] = $card;
             echo "<img src=cards/" . $suit . "/" . $face . ".png";
             
@@ -84,10 +79,9 @@ function dealHand($player){
             $card = array_pop($deck); //deals the top card from the deck
             $suit = $suits[floor($card/13)]; //determines the suit
             $face = $card % 13; //determines value, with a mod 13 for 13 cards in a suit
-            if ($face == 0){
+            if ($face == 0)
                 $face = 13; //if the card has no value (Ace), the value is 13
-            }
-            
+
             $p4[] = $card;
             echo "<img src=cards/" . $suit . "/" . $face . ".png";
             
