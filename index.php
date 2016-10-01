@@ -229,14 +229,15 @@ function showCards($player){
         <img class = "pictureslist" src="img/<?=$playerPictures[1]?>" alt="p2" height="120" width="120" /><span class="playerList"> <?=showCards("p2")?> <br><br>
         <img class = "pictureslist" src="img/<?=$playerPictures[2]?>" alt="p3" height="120" width="120" /><span class="playerList"> <?=showCards("p3")?> <br><br>
         <img class = "pictureslist" src="img/<?=$playerPictures[3]?>" alt="p4" height="120" width="120" /><span class="playerList"> <?=showCards("p4")?> <br><br>
-    </body>
+        <span id="winner" color"red"><?php whoWon()?></span>
+        </body>
     
     <br>
     
     <table align = "center" color = "white">
         <tr>
             <td>
-                <a href="javascript:history.go(0)" id="button">Play Again!</a>
+                <a href="javascript:history.go(0)" id="button">Try Again!</a>
             </td>
         </tr>
     </table>
