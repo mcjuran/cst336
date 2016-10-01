@@ -224,11 +224,11 @@ function showCards($player){
     </head>
     
     <body>
-        <?=shuffle($pictures)?>
-        <img class = "pictureslist" src="img/<?=$playerPictures[0]?>" alt="p1" height="120" width="120" /><span class="playerList"> <?=showCards("p1")?> <br><br>
-        <img class = "pictureslist" src="img/<?=$playerPictures[1]?>" alt="p2" height="120" width="120" /><span class="playerList"> <?=showCards("p2")?> <br><br>
-        <img class = "pictureslist" src="img/<?=$playerPictures[2]?>" alt="p3" height="120" width="120" /><span class="playerList"> <?=showCards("p3")?> <br><br>
-        <img class = "pictureslist" src="img/<?=$playerPictures[3]?>" alt="p4" height="120" width="120" /><span class="playerList"> <?=showCards("p4")?> <br><br>
+        <?=shuffle($picture)?>
+        <img class = "pictureslist" src="img/<?=$picture[0]?>" alt="p1" height="120" width="120" /><span class="playerList"> <?=showCards("p1")?> <br><br>
+        <img class = "pictureslist" src="img/<?=$picture[1]?>" alt="p2" height="120" width="120" /><span class="playerList"> <?=showCards("p2")?> <br><br>
+        <img class = "pictureslist" src="img/<?=$picture[2]?>" alt="p3" height="120" width="120" /><span class="playerList"> <?=showCards("p3")?> <br><br>
+        <img class = "pictureslist" src="img/<?=$picture[3]?>" alt="p4" height="120" width="120" /><span class="playerList"> <?=showCards("p4")?> <br><br>
         <span id="winner" color"red"><?php whoWon()?></span>
         </body>
     
