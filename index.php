@@ -98,7 +98,7 @@ function whoWon(){
     
     foreach($players as $key => $num)
     {
-        if ($num > trackWin && $num <= 42){
+        if ($num > trackWin && $num < 43){
             $trackWin = $num;
         }
         
@@ -117,7 +117,7 @@ function whoWon(){
     }
     
     else{
-        echo "No Winner. Play again.";
+        echo "No Winner. Play again!";
     }
     
 }
