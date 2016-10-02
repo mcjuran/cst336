@@ -34,10 +34,8 @@ function dealHand($player){
             $card = array_pop($deck); //deals the top card from the deck
             $suit = $suits[floor($card/13)]; //determines the suit
             $face = $card % 13; //determines value, with a mod 13 for 13 cards in a suit
-            if ($face == 0){
+            if ($face == 0)
                 $face = 13; //if the card has no value (Ace), the value is 13
-            }
-            
             $p1[] = $card;
             echo "<img src=cards/" . $suit . "/" . $face . ".png";
             
@@ -51,9 +49,8 @@ function dealHand($player){
             $card = array_pop($deck); //deals the top card from the deck
             $suit = $suits[floor($card/13)]; //determines the suit
             $face = $card % 13; //determines value, with a mod 13 for 13 cards in a suit
-            if ($face == 0){
+            if ($face == 0)
                 $face = 13; //if the card has no value (Ace), the value is 13
-            }
             
             $p2[] = $card;
             echo "<img src=cards/" . $suit . "/" . $face . ".png";
@@ -68,10 +65,8 @@ function dealHand($player){
             $card = array_pop($deck); //deals the top card from the deck
             $suit = $suits[floor($card/13)]; //determines the suit
             $face = $card % 13; //determines value, with a mod 13 for 13 cards in a suit
-            if ($face == 0){
+            if ($face == 0)
                 $face = 13; //if the card has no value (Ace), the value is 13
-            }
-            
             $p3[] = $card;
             echo "<img src=cards/" . $suit . "/" . $face . ".png";
             
@@ -85,10 +80,9 @@ function dealHand($player){
             $card = array_pop($deck); //deals the top card from the deck
             $suit = $suits[floor($card/13)]; //determines the suit
             $face = $card % 13; //determines value, with a mod 13 for 13 cards in a suit
-            if ($face == 0){
+            if ($face == 0)
                 $face = 13; //if the card has no value (Ace), the value is 13
-            }
-            
+
             $p4[] = $card;
             echo "<img src=cards/" . $suit . "/" . $face . ".png";
             
@@ -105,7 +99,7 @@ function whoWon(){
     
     foreach($players as $key => $num)
     {
-        if ($num > trackWin && $num <= 42){
+        if ($num > $trackWin && $num < 43){
             $trackWin = $num;
         }
         
@@ -124,7 +118,7 @@ function whoWon(){
     }
     
     else{
-        echo "No Winner. Play again.";
+        echo "No Winner. Play again!";
     }
     
 }
@@ -232,18 +226,27 @@ function showCards($player){
     
     <body>
         <?=shuffle($picture)?>
+<<<<<<< HEAD
         <img class = "pictureslist" src="img/<?=$playerPictures[0]?>" alt="p1" height="120" width="120" /><span class="playerList"> <?=showCards("p1")?> <br><br>
         <img class = "pictureslist" src="img/<?=$playerPictures[1]?>" alt="p2" height="120" width="120" /><span class="playerList"> <?=showCards("p2")?> <br><br>
         <img class = "pictureslist" src="img/<?=$playerPictures[2]?>" alt="p3" height="120" width="120" /><span class="playerList"> <?=showCards("p3")?> <br><br>
         <img class = "pictureslist" src="img/<?=$playerPictures[3]?>" alt="p4" height="120" width="120" /><span class="playerList"> <?=showCards("p4")?> <br><br>
     </body>
+=======
+        <img class = "pictureslist" src="img/<?=$picture[0]?>" alt="p1" height="120" width="120" /><span class="playerList"> <?=showCards("p1")?> <br><br>
+        <img class = "pictureslist" src="img/<?=$picture[1]?>" alt="p2" height="120" width="120" /><span class="playerList"> <?=showCards("p2")?> <br><br>
+        <img class = "pictureslist" src="img/<?=$picture[2]?>" alt="p3" height="120" width="120" /><span class="playerList"> <?=showCards("p3")?> <br><br>
+        <img class = "pictureslist" src="img/<?=$picture[3]?>" alt="p4" height="120" width="120" /><span class="playerList"> <?=showCards("p4")?> <br><br>
+        <span id="winner" color"red"><?php whoWon ()?></span>
+        </body>
+>>>>>>> a113e9788c68386590632c2649061388cc85a6c7
     
     <br>
     
     <table align = "center" color = "white">
         <tr>
             <td>
-                <a href="javascript:history.go(0)" id="button">Play Again!</a>
+                <a href="javascript:history.go(0)" id="button">Try Again!</a>
             </td>
         </tr>
     </table>
