@@ -3,15 +3,16 @@
 
 $suits = array("clubs", "diamonds", "hearts", "spades");
 
-$players = array("p1" => 0, "p2" => 0, "p3" >= 0, "p4" => 0);
+$players = array("p1" => 0, "p2" => 0, "p3" => 0, "p4" => 0);
 
-$picture = array("hardesh.jpg", "morgan.jpg", "chris.jpg", "brian.jpg");
+$picture = array("brian.jpg", "chris.jpg", "hardesh.jpg", "morgan.jpg");
 
 $p1 = array(); //filled out in another function
 $p2 = array();
 $p3 = array();
 $p4 = array();
 $deck = array();
+$picture = array();
 
 for ($i = 0; $i <= 51; $i++){
     $deck[] = $i;
@@ -27,7 +28,7 @@ function dealHand($player){
     global $suits;
     global $deck;
     
-    if ($player == "p1"){
+    if ($player === "p1"){
         $counter1 = 0;
         while ($counter1 <= 35){
             $card = array_pop($deck); //deals the top card from the deck
@@ -44,7 +45,7 @@ function dealHand($player){
         }
     }
     
-    if ($player == "p2"){
+    if ($player === "p2"){
         $counter2 = 0;
         while ($counter2 <= 35){
             $card = array_pop($deck); //deals the top card from the deck
@@ -61,7 +62,7 @@ function dealHand($player){
         }
     }
     
-    if ($player == "p3"){
+    if ($player === "p3"){
         $counter3 = 0;
         while ($counter3 <= 35){
             $card = array_pop($deck); //deals the top card from the deck
@@ -78,7 +79,7 @@ function dealHand($player){
         }
     }
     
-    if ($player == "p4"){
+    if ($player === "p4"){
         $counter4 = 0;
         while ($counter4 <= 35){
             $card = array_pop($deck); //deals the top card from the deck
@@ -137,7 +138,7 @@ function showCards($player){
     $card = dealHand($player); //shows the cards
     
     //player 1
-    if ($player == "$p1"){
+    if ($player === "$p1"){
         echo "<span id = points>";
     
         foreach($p1 as $card){
@@ -157,7 +158,7 @@ function showCards($player){
     }
     
     //player 2
-    if ($player == "$p2"){
+    if ($player === "$p2"){
         echo "<span id = points>";
     
         foreach($p2 as $card){
@@ -177,7 +178,7 @@ function showCards($player){
     }
     
     //player 3
-    if ($player == "$p3"){
+    if ($player === "$p3"){
         echo "<span id = points>";
     
         foreach($p3 as $card){
@@ -197,7 +198,7 @@ function showCards($player){
     }
     
     //player 4
-    if ($player == "$p4"){
+    if ($player === "$p4"){
         echo "<span id = points>";
     
         foreach($p4 as $card){
@@ -230,7 +231,7 @@ function showCards($player){
     </head>
     
     <body>
-        <?=shuffle($pictures)?>
+        <?=shuffle($picture)?>
         <img class = "pictureslist" src="img/<?=$playerPictures[0]?>" alt="p1" height="120" width="120" /><span class="playerList"> <?=showCards("p1")?> <br><br>
         <img class = "pictureslist" src="img/<?=$playerPictures[1]?>" alt="p2" height="120" width="120" /><span class="playerList"> <?=showCards("p2")?> <br><br>
         <img class = "pictureslist" src="img/<?=$playerPictures[2]?>" alt="p3" height="120" width="120" /><span class="playerList"> <?=showCards("p3")?> <br><br>
