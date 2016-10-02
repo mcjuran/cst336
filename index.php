@@ -98,7 +98,7 @@ function whoWon(){
     
     foreach($players as $key => $num)
     {
-        if ($num > trackWin && $num < 43){
+        if ($num > $trackWin && $num < 43){
             $trackWin = $num;
         }
         
@@ -229,7 +229,7 @@ function showCards($player){
         <img class = "pictureslist" src="img/<?=$picture[1]?>" alt="p2" height="120" width="120" /><span class="playerList"> <?=showCards("p2")?> <br><br>
         <img class = "pictureslist" src="img/<?=$picture[2]?>" alt="p3" height="120" width="120" /><span class="playerList"> <?=showCards("p3")?> <br><br>
         <img class = "pictureslist" src="img/<?=$picture[3]?>" alt="p4" height="120" width="120" /><span class="playerList"> <?=showCards("p4")?> <br><br>
-        <span id="winner" color"red"><?php whoWon()?></span>
+        <span id="winner" color"red"><?php whoWon ()?></span>
         </body>
     
     <br>
