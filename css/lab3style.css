@@ -1,0 +1,30 @@
+h1 {
+   text-align: center;
+    color: white;
+    
+}
+
+body {
+    background-image: url("felt.jpg");
+    
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: .5rem;
+    background-color: red;
+    color: black;
+}
+
+table {
+    margin: 5px auto; width: 50%;
+    background: red;
+}
+
+td {
+    text-align: center;
+}
+
